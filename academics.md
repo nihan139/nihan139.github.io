@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "CV"
+title: "Academics"
 ---
 
 {% if site.show_excerpts %}
