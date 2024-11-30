@@ -16,8 +16,9 @@ minimal: false             # use a dark header
 # Menu
 
 navigation:                # accepts {file, title, url, icon, sidebaricon}
-  - {title: "CV", file: "cv.md"}
+  - {file: "academics.md", title: "Academics"}
   - {file: "README.md", title: "About me"}
+  - {file: "Md_Tasnim_Azad_CV.pdf", title:"CV"}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
   - {title: Mail, icon: envelope, url: "mailto:nihan.tas.2016@gmail.com"}
