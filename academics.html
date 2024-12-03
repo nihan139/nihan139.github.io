@@ -1,35 +1,30 @@
-
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+title: "Academics"
+---
 	
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!--<link rel="stylesheet" href="style.css" />-->
-  
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-  <title>Academics</title>
-  <style>
+
+<style>
 	* {
 	  box-sizing: border-box;
 	}
-
+	
 	/* Create two unequal columns that floats next to each other */
 	.column {
 	  float: left;
 	  padding: 0px;
 	  height: 300px; /* Should be removed. Only for demonstration */
 	}
-
+	
 	.left {
 	  width: 35%;
 	}
-
+	
 	.right {
 	  width: 65%;
 	}
 	
-
+	
 	/* Clear floats after the columns */
 	.row:after {
 	  content: "";
@@ -73,25 +68,8 @@
 	  padding: 10px;
 	  border-radius: 50%;
 	}	
- </style> 
-</head>
+</style> 
 
-
-{% if site.navigation %}
-  {% assign pages = site.navigation %}
-{% else %}
-  {% assign pages = site.pages | where_exp: "item", "item.title and item.sitemap != false" | sort: "order" %}
-{% endif %}
-
-<header>
-  <a href="{{ "/" | relative_url }}" class="title">{{ site.title | escape }}</a>
-  {% include menu.html menu=pages %}
-</header>
-
-
-
-	
-<body>
 <div class="row">
   <div class="column left">
   <h1>
@@ -148,16 +126,4 @@
   </div>
   
   </div>
-</body>
-
-{% if site.external %}
-<footer>
-  <div>{{ site.description | default: site.title }}</div>
-  {% include menu.html menu=site.external %}
-</footer>
-{% endif %}
-
-
-
-</html>
 
