@@ -1,6 +1,10 @@
 ---
-layout: Page
+layout: default
 title: "Publications"
 ---
 
-Hello
+{% if site.show_excerpts %}
+  {% include home.html %}
+{% else %}
+  {% include archive.html title="Posts" %}
+{% endif %}
