@@ -1,14 +1,14 @@
----
-layout: default
-title: "Academics"
----
 
+<!DOCTYPE html>
+<html lang="en">
+	
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!--<link rel="stylesheet" href="style.css" />-->
   
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <title>Academics</title>
   <style>
 	* {
 	  box-sizing: border-box;
@@ -72,12 +72,25 @@ title: "Academics"
 	img {
 	  padding: 10px;
 	  border-radius: 50%;
-	}
-	
- </style>
-  
+	}	
+ </style> 
 </head>
 
+
+{% if site.navigation %}
+  {% assign pages = site.navigation %}
+{% else %}
+  {% assign pages = site.pages | where_exp: "item", "item.title and item.sitemap != false" | sort: "order" %}
+{% endif %}
+
+<header>
+  <a href="{{ "/" | relative_url }}" class="title">{{ site.title | escape }}</a>
+  {% include menu.html menu=pages %}
+</header>
+
+
+
+	
 <body>
 <div class="row">
   <div class="column left">
@@ -137,11 +150,14 @@ title: "Academics"
   </div>
 </body>
 
-{% if paginator.total_pages > 1 %}
-  <footer>
-    {% if paginator.previous_page %}<a href="{{ paginator.previous_page_path | relative_url }}">« newer posts</a>{% else %}<span></span>{% endif %}
-    <span>page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-    {% if paginator.next_page %}<a href="{{ paginator.next_page_path | relative_url }}">older posts »</a>{% else %}<span></span>{% endif %}
-  </footer>
+{% if site.external %}
+<footer>
+  <div>{{ site.description | default: site.title }}</div>
+  {% include menu.html menu=site.external %}
+</footer>
 {% endif %}
+
+
+
+</html>
 
