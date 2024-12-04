@@ -1,9 +1,6 @@
----
-layout: page
-title: ""
----
-
-
+<!-- 
+Online HTML, CSS and JavaScript editor to run code online.
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,7 +22,7 @@ title: ""
 	.column {
 	  float: left;
 	  padding: 0px;
-	  height: 300px; /* Should be removed. Only for demonstration */
+	  height: 500px; /* Should be removed. Only for demonstration */
 	}
 
 	.left {
@@ -36,6 +33,9 @@ title: ""
 	  width: 65%;
 	}
 	
+	.align {
+		text-align: center;
+	}
 
 	/* Clear floats after the columns */
 	.row:after {
@@ -45,49 +45,119 @@ title: ""
 	}
 	
 	li {
-	  margin: 13px;
+	  margin: 18px;
 	}
 	
 	li.font1 {
-		font-size: 15px;
+		font-size: 20px;
 	}
 	
 	li.font2 {
-		font-size: 15px;
+		font-size: 18px;
 	}
 	
 	i.font1{
-		font-size: 12px;
+		font-size: 17px;
 	}
 	
 	p.font1 {
-		font-size: 15px;
+		font-size: 20px;
 	}
 	
 	p.font2 {
-		font-size: 14px;
+		font-size: 19px;
+		line-height: 1.5;
 	}
 	
 	body {
-		margin: 5px;
+		margin: 20px;
 	}
 	
 	img {
 	  padding: 10px;
 	  border-radius: 50%;
+	  display: block;
+	  margin-left: auto;
+	  margin-right: auto;
 	}
+	
+	
+	header {
+      background: #fff;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+      top: 0;
+      z-index: 1000;
+	  position: sticky;
+	  font-size: 1.2em;
+    }
+
+    header ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin: 0;
+    }
+
+    header ul li {
+      display: inline;
+    }
+
+    header ul li a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    header ul li a:hover {
+      color: #007BFF;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 10px;
+      background: #fff;
+	  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      font-size: 1.2em;
+    }
+
+    footer a {
+      color: #333;
+      margin: 0 20px;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #007BFF;
+    }
+	
+	
 	
  </style>
   
-  
-  
-  
 </head>
 
+
+<header>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#academics">Academics</a></li>
+    <li><a href="#work-experience">Work Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#cv">CV</a></li>
+  </ul>
+</header>
+
+
 <body>
+
 <div class="row">
-  <div class="column left">
-  
+  <div class="column left align">
+  <br> <br> <br>
   <img src="nihan.jpg" width="250" height="250">
   
   <h1>
@@ -118,15 +188,16 @@ title: ""
 		<h1>
 			Interests
 		</h1>
+		<li class="font2"> Semiconductor </li>
 		<li class="font2"> Device Physics </li>
 		<li class="font2"> Power System </li>
 		<li class="font2"> Renewable Energy </li>
-		<li class="font2"> Computer Vision </li>
+		<li class="font2"> VLSI </li>
 	</div>
 
 	<div class="column right">
 		<h1>
-			Education
+			Academic Qualifications
 		</h1>
 		
 
@@ -156,6 +227,15 @@ title: ""
   
   </div>
   </div>
+    
 </body>
+
+
+<footer>
+  Contact &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="mailto:email@example.com">Mail</a>
+  <a href="https://github.com" target="_blank">GitHub</a>
+  <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+</footer> 
 
 </html>
